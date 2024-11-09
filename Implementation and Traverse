@@ -1,37 +1,39 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 struct Node{
     int data;
-    struct Node * next;
+    struct Node *next;
 };
-void linkedlist_Traversal(struct Node *ptr){
-    while(ptr!=NULL){
-        printf("Element:%d\n",ptr->data);
-        ptr=ptr->next;
+
+void Traverse(struct Node *newnode){
+    while(newnode!=NULL){
+        printf("Element:%d\n",newnode->data);
+        newnode=newnode->next;
     }
 }
+
 int main(){
-    struct Node * head;
-    struct Node * second;
-    struct Node * third;
-    struct Node * fourth;
-    //allocate memory for nodes
-    head=(struct Node *)malloc(sizeof(struct Node));
-    second=(struct Node *)malloc(sizeof(struct Node));
-    third=(struct Node *)malloc(sizeof(struct Node));
-    fourth=(struct Node *)malloc(sizeof(struct Node));
-    //link first and second node
+    struct Node *head;
+    struct Node *second;
+    struct Node *third;
+    struct Node *fourth;
+
+    head=(struct Node*)malloc(sizeof(struct Node));
+    second=(struct Node*)malloc(sizeof(struct Node));
+    third=(struct Node*)malloc(sizeof(struct Node));
+    fourth=(struct Node*)malloc(sizeof(struct Node));
+
     head->data=7;
     head->next=second;
-    //link second and third node
-    second->data=11;
+
+    second->data=14;
     second->next=third;
-    //link third and fourth node
-    third->data=42;
+
+    third->data=21;
     third->next=fourth;
-    //Terminate the list at the fourth node
-    fourth->data=66;
+    
+    fourth->data=28;
     fourth->next=NULL;
-    linkedlist_Traversal(head);
-    return 0;
+    Traverse(head);
 }
