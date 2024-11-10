@@ -62,7 +62,7 @@ int main(){
     printf("Before Insertion:\n");
     linked_List_Traverse(head);
 
-    // printf("Insert at first Insertion:\n");
+    // printf("Insert at first :\n");
     // head=Insert_At_first(head,55);
     // linked_List_Traverse(head);
 
